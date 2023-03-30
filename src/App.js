@@ -21,7 +21,7 @@ import ProductHero from './component/home/ProductHero'
 import NotFound from './component/dashboard/NotFound'
 import PlaceBid from './component/Auction/PlaceBid';
 import ListBids from './component/Auction/ListBids';
-
+import ListTokens from './component/Auction/ListTokens';
 
 
 class App extends React.Component {
@@ -40,6 +40,7 @@ class App extends React.Component {
             <Route exact path="/placeBid" component={PlaceBid}/>
             <PublicRoute exact path='/user/dashboard' component={UserDashboard} />
             <PublicRoute exact path="/logout" component={LogOut} />
+            <PublicRoute exact path="/ListToken" component={ListTokens} />
             
             //User
 

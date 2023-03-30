@@ -46,7 +46,7 @@ return (
               <Link className="nav-link" to="/product" role="button" style={{ background: "#000066", color: '#f3f3f3' }}>Add Tokens</Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to='/myproduct' role="button" style={{ background: "#000066", color: '#f3f3f3' }}>My Tokens</Link>
+              <Link className="nav-link" to='/ListToken' role="button" style={{ background: "#000066", color: '#f3f3f3' }}>My Tokens</Link>
           </li>
           <li className="nav-item">
               <Link className="nav-link" to="/placeBid" role="button" style={{ background: "#000066", color: '#f3f3f3' }}>Place Bid</Link>
