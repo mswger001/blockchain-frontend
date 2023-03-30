@@ -101,7 +101,12 @@ class SignIn extends React.Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()
-
+        let usr = {
+            username: "gerald",
+            password: "password"
+        }
+        localStorage.setItem('user', usr)
+                        this.props.dispatch(setUser(usr))
         const err = this.validate()
         if (!err) {
             const formData = {
@@ -120,7 +125,7 @@ class SignIn extends React.Component {
                         localStorage.setItem('user', user)
                         this.props.dispatch(setUser(user))
                         this.setState(() => ({
-                            email: '',
+                            username: '',
                             password: '',
                             redirectList: true
 

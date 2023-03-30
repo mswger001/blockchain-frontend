@@ -19,10 +19,11 @@ import ProductHero from './component/home/ProductHero'
 
 //User
 import NotFound from './component/dashboard/NotFound'
-import PlaceBid from './component/Auction/PlaceBid';
+import PlaceBid from './component/Auction/PlaceBi';
 import ListBids from './component/Auction/ListBids';
 import ListTokens from './component/Auction/ListTokens';
 import AuctionList from './component/Auction/AuctionList';
+import Combined from './component/combined/Combined';
 
 
 class App extends React.Component {
@@ -42,7 +43,7 @@ class App extends React.Component {
             <PublicRoute exact path='/user/dashboard' component={UserDashboard} />
             <PublicRoute exact path="/logout" component={LogOut} />
             <PublicRoute exact path="/AuctionList" component={AuctionList} />
-        
+            <PublicRoute exact path="/Combined" component={Combined}/>
             <PublicRoute exact path="/ListToken" component={ListTokens} />
             
             //User

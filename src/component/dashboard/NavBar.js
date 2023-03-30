@@ -32,12 +32,6 @@ return (
               <Link className="nav-link" to='/user/login' role="button" style={{ background: "#000066", color: '#f3f3f3' }}>Login</Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/user/dashboard" role="button" style={{ background: "#000066", color: '#f3f3f3' }}>Dashboard</Link>
-          </li>
-          <li className="nav-item">
-              <Link className="nav-link" to="/product" role="button" style={{ background: "#000066", color: '#f3f3f3' }}>Add Tokens</Link>
-          </li>
-          <li className="nav-item">
               <Link className="nav-link" to='/ListToken' role="button" style={{ background: "#000066", color: '#f3f3f3' }}>My Tokens</Link>
           </li>
           <li className="nav-item">
@@ -50,7 +44,7 @@ return (
               <Link className="nav-link" to="/ListBids" role="button" style={{ background: "#000066", color: '#f3f3f3' }}>List Bid</Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/bidders" role="button" style={{ background: "#000066", color: '#f3f3f3' }}>My token Bidders</Link>
+              <Link className="nav-link" to="/Combined" role="button" style={{ background: "#000066", color: '#f3f3f3' }}>My token Bidders</Link>
           </li>
         </ul>
       </div>

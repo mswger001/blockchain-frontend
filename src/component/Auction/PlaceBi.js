@@ -10,7 +10,9 @@ import './Bids.styles.css';
 
 
 
-function ListBids()  {  
+function PlaceBid()  {
+
+  
 
   const [placeBidRequest, setPlaceBidRequest] = useState({
     placedBy: '',
@@ -56,28 +58,45 @@ function ListBids()  {
   return (
     <div className="main">
       <Typography component="h1" variant="h4" align="center">
-        List Bids Interface
+        Bids Controller Interface
       </Typography>
   
       <Paper className="paper">
-    
-        {bid.id && (
-          <Typography variant="body1">
-            Bid placed successfully with ID: {bid.id}
-          </Typography>
-        )}
-  
-        <Typography component="h2" variant="h5" className="formlabel">
-          List Bid for Auction
+        <Typography component="h2" variant="h5">
+          Place Bid
         </Typography>
-        <form className="form" onSubmit={handleListForAuctionSubmit}>
+        <form className="form" onSubmit={handlePlaceBidSubmit}>
           <TextField
-            label="Bid value"
-            value={listForAuctionRequest.auctionId}
+            label="Placed By"
+            value={placeBidRequest.placedBy}
             onChange={(event) =>
-              setListForAuctionRequest({
-                ...listForAuctionRequest,
-                auctionId: event.target.value,
+              setPlaceBidRequest({
+                ...placeBidRequest,
+                placedBy: event.target.value,
+              })
+            }
+            margin="normal"
+            fullWidth
+          />
+          <TextField
+            label="For Auction"
+            value={placeBidRequest.forAuction}
+            onChange={(event) =>
+              setPlaceBidRequest({
+                ...placeBidRequest,
+                forAuction: event.target.value,
+              })
+            }
+            margin="normal"
+            fullWidth
+          />
+          <TextField
+            label="Amount"
+            value={placeBidRequest.amount}
+            onChange={(event) =>
+              setPlaceBidRequest({
+                ...placeBidRequest,
+                amount: event.target.value,
               })
             }
             margin="normal"
@@ -89,22 +108,20 @@ function ListBids()  {
             color="primary"
             className="submit"
           >
-            List Bid
+            Place Bid
           </Button>
         </form>
-        {bids.length > 0 && (
-          <ul>
-            {bids.map((bid) => (
-              <li key={bid.id}>
-                {bid.placedBy}: {bid.amount}
-              </li>
-            ))}
-          </ul>
+        {bid.id && (
+          <Typography variant="body1">
+            Bid placed successfully with ID: {bid.id}
+          </Typography>
         )}
+  
+
       </Paper>
     </div>
   );
   
 }
 
-export default ListBids;
+export default PlaceBid;
