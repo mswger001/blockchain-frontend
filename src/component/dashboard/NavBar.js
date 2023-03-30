@@ -6,16 +6,8 @@ import './navbar.css'
 
 
 let usr = {
-    firstName: "John",
-    lastName: "Doe",
-    email: "john@example.com",
-    password: "123456",
-    mobile: "1234567890",
-    role: "user",
-    profilePicture: "",
-    tokens: [],
-    createdAt: 1585739094181,
-    isAuthenticated: true
+    username: "gerald",
+    password: "password"
 }
 const Navbar = (props) => {
     // console.log('navbar', props)
@@ -49,6 +41,9 @@ return (
               <Link className="nav-link" to='/ListToken' role="button" style={{ background: "#000066", color: '#f3f3f3' }}>My Tokens</Link>
           </li>
           <li className="nav-item">
+              <Link className="nav-link" to='/AuctionList' role="button" style={{ background: "#000066", color: '#f3f3f3' }}>Auctions</Link>
+          </li>
+          <li className="nav-item">
               <Link className="nav-link" to="/placeBid" role="button" style={{ background: "#000066", color: '#f3f3f3' }}>Place Bid</Link>
           </li>
           <li className="nav-item">
@@ -65,7 +60,7 @@ return (
 
 const mapStateToProps = (state) => {
     return {
-        user: state.users
+        user: usr
     }
 }
 

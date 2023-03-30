@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 function AuctionList() {
   const [auctions, setAuctions] = useState([]);
 
   useEffect(() => {
-    axios.get('/listOpenForBidding')
-      .then(response => {
-        setAuctions(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    fetch('/listOpenForBidding')
+      .then(res => res.json())
+      .then(data => setAuctions(data));
   }, []);
 
   return (
     <div>
-      <h1>List of Auctions Open for Bidding</h1>
+      <h1>List of Open Auctions:</h1>
       <ul>
         {auctions.map(auction => (
-          <li key={auction.id}>{auction.name}: {auction.price}</li>
+          <li key={auction.id}>
+            <strong>{auction.name}</strong> - Current Bid: {auction.currentBid}
+          </li>
         ))}
       </ul>
     </div>

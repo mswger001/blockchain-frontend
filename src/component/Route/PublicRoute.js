@@ -11,7 +11,7 @@ const PublicRoute = (props) => {
 
         <Route {...rest} render={(props) => (
 
-            user.isAuthenticated
+            user!=null
                 ? <Component {...props} />
                 : <Redirect to='/user/login' />
         )} />
